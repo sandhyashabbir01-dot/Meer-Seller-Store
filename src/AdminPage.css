@@ -1,0 +1,1310 @@
+/* =========================================
+   MEER LUXURY COLLECTION - ADMIN DASHBOARD
+========================================= */
+
+.admin-page {
+  min-height: 100vh;
+  background: #f6f3ee;
+  color: #2b2520;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================================
+   ADMIN HEADER
+========================================= */
+
+.admin-header {
+  height: 75px;
+  padding: 0 40px;
+  background: #171310;
+  border-bottom: 1px solid #b08a4a;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+.admin-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-logo span {
+  color: #d9b66f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  letter-spacing: 6px;
+}
+
+.admin-logo small {
+  margin-top: 5px;
+  color: #ddd3c4;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+.admin-title {
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+}
+
+/* =========================================
+   ADMIN CONTENT
+========================================= */
+
+.admin-content {
+  width: 92%;
+  max-width: 1400px;
+  margin: 40px auto;
+}
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.admin-page-heading {
+  margin-bottom: 30px;
+}
+
+.admin-page-heading h1 {
+  margin: 0 0 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 400;
+
+  color: #211b17;
+}
+
+.admin-page-heading p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+/* =========================================
+   DASHBOARD STATS
+========================================= */
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.admin-stat-card {
+  position: relative;
+
+  background: #ffffff;
+  border: 1px solid #e2d9cc;
+
+  padding: 22px 20px;
+
+  box-shadow: 0 4px 18px rgba(55, 40, 25, 0.05);
+
+  transition: 0.25s ease;
+}
+
+.admin-stat-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: #b08a4a;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbb18d;
+
+  box-shadow: 0 8px 25px rgba(55, 40, 25, 0.08);
+}
+
+.admin-stat-card span {
+  display: block;
+
+  color: #8a7a68;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.3px;
+
+  margin-bottom: 10px;
+}
+
+.admin-stat-card strong {
+  color: #211b17;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 27px;
+
+  font-weight: 400;
+}
+
+/* =========================================
+   ORDERS SECTION
+========================================= */
+
+.admin-orders-section {
+  background: transparent;
+}
+
+/* =========================================
+   LUXURY SECTION HEADER
+========================================= */
+
+.admin-section-header {
+  position: relative;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    135deg,
+    #211b17 0%,
+    #171310 100%
+  );
+
+  border: 1px solid #b08a4a;
+  box-shadow: 0 6px 20px rgba(55, 40, 25, 0.10);
+  box-sizing: border-box;
+}
+
+.admin-section-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #d9b66f;
+}
+
+.admin-section-header h2 {
+  margin: 0;
+
+  color: #d9b66f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.admin-section-header span {
+  color: #ddd3c4;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+/* =========================================
+   ORDERS LIST
+   3 CARDS IN ONE ROW
+========================================= */
+
+.admin-orders-list {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+/* =========================================
+   INDIVIDUAL ORDER CARD
+========================================= */
+
+.admin-order-card {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e2d8ca;
+
+  box-shadow: 0 5px 20px rgba(55, 40, 25, 0.06);
+
+  overflow: hidden;
+
+  transition: all 0.25s ease;
+}
+
+.admin-order-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #cdb38d;
+
+  box-shadow: 0 9px 28px rgba(55, 40, 25, 0.10);
+}
+
+/* =========================================
+   ORDER TOP
+========================================= */
+
+.admin-order-top {
+  padding: 14px 16px;
+
+  min-height: 66px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  background: #fbf9f6;
+
+  border-bottom: 1px solid #ebe3d9;
+}
+
+
+.admin-order-top h3 {
+  margin: 0 0 6px;
+
+  color: #211b17;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+.admin-order-top p {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+/* =========================================
+   STATUS DROPDOWN
+========================================= */
+
+.order-status-select {
+  width: 100px;
+
+  padding: 7px 8px;
+
+  box-sizing: border-box;
+
+  background: #f8f3eb;
+
+  border: 1px solid #d8c6aa;
+
+  border-radius: 18px;
+
+  color: #806333;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+.order-status-select:hover {
+  border-color: #b08a4a;
+
+  background: #f5eee4;
+}
+
+.order-status-select:focus {
+  border-color: #9a753c;
+
+  box-shadow: 0 0 0 2px rgba(176, 138, 74, 0.08);
+}
+
+.order-status-select option {
+  background: #ffffff;
+  color: #333;
+}
+
+/* =========================================
+   PRODUCT SECTION
+========================================= */
+
+.admin-order-products {
+  padding: 17px 16px;
+
+  border-bottom: 1px solid #eee7de;
+}
+
+.admin-order-products h4 {
+  margin: 0 0 12px;
+
+  color: #8a7357;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.4px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   PRODUCT ROW
+========================================= */
+
+.admin-product-row {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  background: #fcfaf7;
+
+  border: 1px solid #eee6dc;
+
+  border-radius: 3px;
+}
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.admin-product-row img {
+  width: 48px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border: 1px solid #dcd0c0;
+
+  border-radius: 2px;
+
+  background: #f5f1eb;
+}
+
+/* =========================================
+   PRODUCT INFO
+========================================= */
+
+.admin-product-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.admin-product-info strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #332b25;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1.35;
+
+  white-space: normal;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+.admin-product-info p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 10px;
+}
+
+/* =========================================
+   PRODUCT PRICE
+========================================= */
+
+.admin-product-price {
+  flex-shrink: 0;
+
+  color: #8d6b34;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+/* =========================================
+   CUSTOMER DETAILS
+========================================= */
+
+.admin-customer-info {
+  padding: 17px 16px;
+
+  border-bottom: 1px solid #eee7de;
+}
+
+.admin-customer-info h4 {
+  margin: 0 0 12px;
+
+  color: #8a7357;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.4px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   CUSTOMER GRID
+========================================= */
+
+.customer-details-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px 12px;
+}
+
+.customer-details-grid p {
+  margin: 0;
+
+  color: #5f5750;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  min-width: 0;
+
+  word-break: break-word;
+}
+
+.customer-details-grid p strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #9a856b;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   CUSTOMER ADDRESS
+========================================= */
+
+.customer-details-grid .customer-address {
+  grid-column: 1 / -1;
+}
+
+/* =========================================
+   TOTAL
+========================================= */
+
+.admin-order-total {
+  min-height: 52px;
+
+  padding: 12px 16px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #fbf9f6;
+}
+
+.admin-order-total span {
+  color: #8a7a68;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.admin-order-total strong {
+  color: #8d6b34;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+}
+.admin-order-total strong {
+  color: #8d6b34;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   OLD STATUS BADGE
+========================================= */
+
+.order-status {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  background: #f0e8d8;
+
+  color: #8b6a32;
+}
+
+/* =========================================
+   ACTION BUTTON
+========================================= */
+
+.admin-action-button {
+  padding: 8px 13px;
+
+  border: 1px solid #b08a4a;
+
+  background: transparent;
+
+  color: #8d6b34;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.admin-action-button:hover {
+  background: #b08a4a;
+
+  color: #ffffff;
+}
+
+/* =========================================
+   EMPTY ORDERS
+========================================= */
+
+.admin-empty {
+  padding: 70px 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2d9cc;
+
+  text-align: center;
+}
+
+.admin-empty h3 {
+  margin: 0 0 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+
+  font-weight: 400;
+
+  color: #211b17;
+}
+
+.admin-empty p {
+  margin: 0;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .admin-orders-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .admin-orders-list {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-header {
+    padding: 0 20px;
+  }
+
+  .admin-order-top {
+    padding: 14px;
+  }
+
+  .admin-order-products,
+  .admin-customer-info {
+    padding: 16px 14px;
+  }
+
+  .admin-order-total {
+    padding: 12px 14px;
+  }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .admin-header {
+    height: auto;
+
+    min-height: 75px;
+
+    padding: 15px 18px;
+  }
+
+  .admin-logo span {
+    font-size: 21px;
+  }
+
+  .admin-title {
+    font-size: 9px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-page-heading h1 {
+    font-size: 27px;
+  }
+
+  .admin-content {
+    width: 94%;
+
+    margin: 25px auto;
+  }
+
+  .admin-order-top h3 {
+    font-size: 11px;
+  }
+
+  .order-status-select {
+    width: 90px;
+
+    font-size: 8px;
+  }
+
+  .admin-product-row img {
+    width: 45px;
+    height: 55px;
+  }
+
+  .admin-product-price {
+    font-size: 10px;
+  }
+
+}/* =========================================
+   DELETE ORDER BUTTON
+========================================= */
+
+.delete-order-button {
+  flex-shrink: 0;
+
+  padding: 7px 12px;
+
+  border: 1px solid #c9a9a0;
+
+  background: #fff8f6;
+
+  color: #9a5f52;
+
+  border-radius: 18px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.delete-order-button:hover {
+  background: #9a5f52;
+
+  border-color: #9a5f52;
+
+  color: #ffffff;
+}/* =========================================
+   ADMIN LOGIN PAGE
+========================================= */
+
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f3ee;
+  padding: 20px;
+}
+
+.admin-login-box {
+  background: #ffffff;
+  padding: 40px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(55, 40, 25, 0.1);
+  text-align: center;
+  border: 1px solid #e2d9cc;
+}
+
+.admin-login-box .admin-logo {
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.admin-login-box h2 {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  color: #211b17;
+}
+
+.admin-login-box p {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.admin-login-form input {
+  padding: 12px 14px;
+  border: 1px solid #d8c6aa;
+  font-size: 14px;
+  outline: none;
+}
+
+.admin-login-form input:focus {
+  border-color: #b08a4a;
+}
+
+.admin-login-form button {
+  padding: 12px;
+  background: #171310;
+  color: #d9b66f;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.admin-login-form button:hover {
+  background: #b08a4a;
+  color: #171310;
+}
+
+.admin-login-error {
+  color: #b00020;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* =========================================
+   ADMIN LOGOUT BUTTON
+========================================= */
+
+.admin-logout-button {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #d9b66f;
+  color: #d9b66f;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.admin-logout-button:hover {
+  background: #d9b66f;
+  color: #171310;
+}
+
+/* =========================================
+   STORE SETTINGS SECTION
+========================================= */
+
+.admin-settings-section {
+  background: #ffffff;
+  border: 1px solid #e2d9cc;
+  padding: 22px 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 18px rgba(55, 40, 25, 0.05);
+}
+
+.admin-settings-section h2 {
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #211b17;
+}
+
+.admin-setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.admin-setting-row strong {
+  color: #211b17;
+  font-size: 14px;
+}
+
+.admin-setting-row p {
+  margin: 4px 0 0;
+  color: #888;
+  font-size: 12px;
+}
+
+.toggle-switch {
+  width: 50px;
+  height: 26px;
+  border-radius: 20px;
+  border: none;
+  background: #d8c6aa;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.toggle-switch.on {
+  background: #6f9c6a;
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: left 0.2s ease;
+}
+
+.toggle-switch.on .toggle-knob {
+  left: 27px;
+}/* =========================================
+   SELLER MANAGEMENT
+========================================= */
+
+.seller-status {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border-radius: 18px;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.seller-status.pending {
+  background: #f5eee4;
+  color: #8d6b34;
+  border: 1px solid #d8c6aa;
+}
+
+.seller-status.approved {
+  background: #edf6ee;
+  color: #4f7d54;
+  border: 1px solid #b9d4bc;
+}
+
+.seller-status.rejected {
+  background: #f8eeee;
+  color: #9a5f52;
+  border: 1px solid #dfbdb7;
+}
+
+/* Seller Action Buttons */
+
+.seller-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  background: #fbf9f6;
+}
+
+.seller-actions button {
+  padding: 7px 13px;
+  border-radius: 18px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Approve */
+
+.seller-approve-button {
+  border: 1px solid #9bbd9f;
+  background: #f3faf4;
+  color: #4f7d54;
+}
+
+.seller-approve-button:hover {
+  background: #5f8f64;
+  border-color: #5f8f64;
+  color: #ffffff;
+}
+
+/* Reject */
+
+.seller-reject-button {
+  border: 1px solid #d4aaa3;
+  background: #fff8f6;
+  color: #9a5f52;
+}
+
+.seller-reject-button:hover {
+  background: #9a5f52;
+  border-color: #9a5f52;
+  color: #ffffff;
+}
+
+/* Seller Details */
+
+.seller-actions .delete-order-button {
+  margin-left: auto;
+}/* =========================================
+   ADMIN PRODUCT MANAGEMENT
+========================================= */
+
+.admin-products-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-add-product-button {
+  padding: 9px 15px;
+  border: 1px solid #b08a4a;
+  background: #171310;
+  color: #d9b66f;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.admin-add-product-button:hover {
+  background: #b08a4a;
+  color: #171310;
+}
+
+.admin-product-card {
+  position: relative;
+}
+
+.admin-product-card-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 18px;
+  background: #f4f0ea;
+  border: 1px solid #e1d8cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.admin-product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-product-card-image span {
+  color: #9a8a78;
+  font-size: 11px;
+}
+
+.admin-product-description {
+  margin-top: 15px;
+  color: #777;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.admin-product-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(25, 19, 15, 0.55);
+}
+
+.admin-product-modal {
+  width: 650px;
+  max-width: 94vw;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #fffdf9;
+  border: 1px solid #c9b18d;
+
+  box-shadow: 0 25px 60px rgba(30, 22, 17, 0.25);
+}
+
+.admin-product-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 24px;
+
+  background: #171310;
+  border-bottom: 1px solid #b08a4a;
+}
+
+.admin-product-modal-header span {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #a98b5c;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.admin-product-modal-header h2 {
+  margin: 0;
+
+  color: #d9b66f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.admin-product-modal-header button {
+  border: none;
+  background: transparent;
+  color: #d9b66f;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.admin-product-form {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.admin-product-image-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.admin-product-preview {
+  width: 115px;
+  height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f3eee7;
+  border: 1px solid #d4c3aa;
+
+  overflow: hidden;
+
+  color: #8e7d68;
+  font-size: 10px;
+}
+
+.admin-product-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-image-upload {
+  padding: 10px 15px;
+
+  border: 1px solid #b08a4a;
+  background: #fff;
+
+  color: #866a3c;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.admin-product-form input,
+.admin-product-form select,
+.admin-product-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border: 1px solid #d8c9b7;
+  background: #ffffff;
+
+  color: #3a3129;
+
+  font-size: 11px;
+  outline: none;
+}
+
+.admin-product-form textarea {
+  resize: vertical;
+}
+
+.admin-product-form input:focus,
+.admin-product-form select:focus,
+.admin-product-form textarea:focus {
+  border-color: #b08a4a;
+}
+
+.admin-product-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.admin-product-save-button {
+  margin-top: 4px;
+
+  padding: 13px;
+
+  border: 1px solid #b08a4a;
+  background: #171310;
+
+  color: #d9b66f;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.admin-product-save-button:hover {
+  background: #b08a4a;
+  color: #171310;
+}
+
+.admin-product-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 650px) {
+  .admin-products-header-actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .admin-product-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-product-image-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
