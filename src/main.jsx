@@ -16,7 +16,7 @@ window.fetch = (input, init) =>
   )
 // Phone par bhi website laptop jaisi dikhane ke liye (1100 se upar rakhein).
 // Admin page phone par normal rehta hai.
-const DESIGN_WIDTH = 1200
+const DESIGN_WIDTH = 1000
 
 if (window.location.pathname !== '/admin') {
   document

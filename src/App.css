@@ -1,10 +1,31 @@
 /* =====================================================
    MEER LUXURY COLLECTION
-   MAIN APPLICATION STYLES
+   MAIN APPLICATION STYLES  (LAPTOP ONLY - NO MOBILE CSS)
 ===================================================== */
 
 /* Google Fonts Import (Luxury Fonts) */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* ================= GLOBAL ================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
 
 /* ================= ANNOUNCEMENT BAR ================= */
 
@@ -85,8 +106,6 @@
 }
 
 
-/* ================= LOGO ================= */
-
 /* ================= MEER LUXURY COLLECTION LOGO ================= */
 
 .logo {
@@ -108,12 +127,12 @@
   font-weight: 700;
   text-transform: uppercase;
   font-style: normal;
-  
+
   /* Rich Metallic Gold Gradient */
   background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 30%, #b38728 60%, #aa771c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+
   filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.1));
   transition: all 0.4s ease;
 }
@@ -731,22 +750,6 @@
   color: white;
 }
 
-/* Mobile */
-
-@media (max-width: 768px) {
-  .luxury-collections {
-    grid-template-columns: 1fr;
-  }
-
-  .luxury-collection-card {
-    height: 380px;
-  }
-
-  .luxury-collections-heading h2 {
-    font-size: 28px;
-  }
-}
-
 .category-card {
   background: #ffffff;
   border: 1px solid #e3dcd4;
@@ -895,283 +898,6 @@
 }
 
 
-/* =====================================================
-   RESPONSIVE DESIGN
-===================================================== */
-
-@media (max-width: 1100px) {
-
-  .main-header {
-    flex-wrap: wrap;
-  }
-
-  .search-box {
-    order: 3;
-    max-width: none;
-    flex-basis: 100%;
-  }
-
-  .nav-links {
-    gap: 18px;
-  }
-
-  .nav-links a {
-    font-size: 11px;
-  }
-
-  .hero-section {
-    grid-template-columns: 1fr;
-  }
-
-  .todays-deal {
-    min-height: auto;
-  }
-
-  .deal-product {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 20px;
-  }
-
-  .deal-image {
-    height: 160px;
-  }
-}
-
-
-@media (max-width: 800px) {
-
-  .top-bar {
-    padding: 0 20px;
-  }
-
-  .top-left,
-  .top-right {
-    gap: 10px;
-  }
-
-  .main-header {
-    padding: 20px;
-  }
-
-  .logo {
-    min-width: auto;
-  }
-
-  .logo-main {
-    font-size: 32px;
-    letter-spacing: 6px;
-  }
-
-  .header-actions {
-    gap: 10px;
-  }
-
-  .header-action > span:not(.action-icon),
-  .header-action b {
-    display: none;
-  }
-
-  .navigation {
-    padding: 0 20px;
-  }
-
-  .categories-button {
-    min-width: 145px;
-  }
-
-  .nav-links {
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-left: 15px;
-  }
-
-  .hero-section,
-  .collection-strip,
-  .categories-section {
-    width: 94%;
-  }
-
-  .hero-slider {
-    height: 430px;
-  }
-
-  .hero-content {
-    left: 7%;
-    right: 7%;
-  }
-
-  .hero-content h1 {
-    font-size: 38px;
-  }
-
-  .collection-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .collection-item:nth-child(2) {
-    border-right: none;
-  }
-
-  .collection-item:nth-child(-n + 2) {
-    border-bottom: 1px solid #e4ddd5;
-  }
-
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-main {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .announcement-bar {
-    height: 32px;
-  }
-
-  .announcement-track {
-    font-size: 9px;
-    gap: 25px;
-  }
-
-  .top-bar {
-    height: auto;
-    min-height: 34px;
-    padding: 7px 15px;
-    font-size: 10px;
-  }
-
-  .top-right span:first-child {
-    display: none;
-  }
-
-  .main-header {
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .logo-main {
-    font-size: 28px;
-    letter-spacing: 5px;
-  }
-
-  .logo-sub {
-    font-size: 6px;
-    letter-spacing: 3px;
-  }
-
-  .header-actions {
-    gap: 7px;
-  }
-
-  .action-icon {
-    font-size: 18px;
-  }
-
-  .search-box {
-    height: 43px;
-  }
-
-  .navigation {
-    min-height: 48px;
-    padding: 0 15px;
-  }
-
-  .categories-button {
-    min-width: 125px;
-    height: 48px;
-    font-size: 11px;
-  }
-
-  .nav-links {
-    gap: 20px;
-  }
-
-  .nav-links a {
-    font-size: 10px;
-  }
-
-  .hero-section {
-    margin-top: 15px;
-  }
-
-  .hero-slider {
-    height: 420px;
-  }
-
-  .hero-content h1 {
-    font-size: 31px;
-  }
-
-  .hero-content p {
-    font-size: 12px;
-  }
-
-  .hero-kicker {
-    font-size: 9px;
-    letter-spacing: 2px;
-  }
-
-  .hero-discount {
-    font-size: 23px;
-  }
-
-  .slider-arrow {
-    width: 35px;
-    height: 35px;
-  }
-
-  .prev-arrow {
-    left: 10px;
-  }
-
-  .next-arrow {
-    right: 10px;
-  }
-
-  .deal-product {
-    grid-template-columns: 1fr;
-  }
-
-  .deal-image {
-    height: 190px;
-  }
-
-  .collection-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .collection-item {
-    border-right: none;
-    border-bottom: 1px solid #e4ddd5;
-  }
-
-  .collection-item:last-child {
-    border-bottom: none;
-  }
-
-  .section-heading h2 {
-    font-size: 31px;
-  }
-
-  .footer-main {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .footer-bottom {
-    padding: 15px;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    text-align: center;
-  }
-}
-
 /* ================================
    FASHION PRODUCTS
 ================================ */
@@ -1283,20 +1009,6 @@
 
 .product-card-info .shop-product-button:hover {
   background: #c8a64b;
-}
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .explore-button {
@@ -1434,23 +1146,6 @@
   cursor: pointer;
 }
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .product-detail-content {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .product-detail-image {
-    height: 450px;
-  }
-
-  .product-detail-info h1 {
-    font-size: 28px;
-  }
-}
-
 .collection-card button,
 .category-card button,
 .explore-button {
@@ -1508,7 +1203,10 @@
 .bag-category-arrows button:hover {
   background: #c8a45d;
   color: #1b120d;
-}/* ================================
+}
+
+
+/* ================================
    PROFESSIONAL CART DRAWER
 ================================ */
 
@@ -1763,24 +1461,8 @@
   background: #b08a2e;
 }
 
-/* Mobile */
 
-@media (max-width: 600px) {
-  .cart-panel {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .cart-item {
-    grid-template-columns: 70px 1fr auto;
-    gap: 11px;
-  }
-
-  .cart-item img {
-    width: 70px;
-    height: 88px;
-  }
-}/* =========================================================
+/* =========================================================
    LUXURY CHECKOUT PAGE
    ========================================================= */
 
@@ -2018,66 +1700,6 @@
 
 
 /* =========================================================
-   CHECKOUT RESPONSIVE DESIGN
-   ========================================================= */
-
-@media (max-width: 850px) {
-  .checkout-page-header {
-    padding: 22px 25px;
-  }
-
-  .checkout-main {
-    grid-template-columns: 1fr;
-    margin: 30px auto;
-    gap: 25px;
-  }
-
-  .checkout-form-section {
-    padding: 28px;
-  }
-}
-
-@media (max-width: 550px) {
-  .checkout-page-header {
-    padding: 20px;
-  }
-
-  .checkout-logo span {
-    font-size: 23px;
-    letter-spacing: 5px;
-  }
-
-  .checkout-logo small {
-    font-size: 7px;
-    letter-spacing: 2px;
-  }
-
-  .checkout-back {
-    padding: 9px 13px;
-    font-size: 11px;
-  }
-
-  .checkout-main {
-    padding: 0 15px;
-  }
-
-  .checkout-form-section {
-    padding: 22px;
-  }
-
-  .checkout-form-section h1 {
-    font-size: 27px;
-  }
-
-  .checkout-order-summary {
-    padding: 22px;
-  }
-
-  .checkout-product img {
-    width: 58px;
-    height: 70px;
-  }
-} /* =========================================================
     LUXURY CHECKOUT TYPOGRAPHY
     ========================================================= */
 
@@ -2174,7 +1796,9 @@
 .checkout-total strong {
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
-}.shop-now-button,
+}
+
+.shop-now-button,
 .place-order-button {
   cursor: pointer;
   pointer-events: auto;
@@ -2218,7 +1842,10 @@
   color: #fff;
   font-size: 36px;
   line-height: 70px;
-}/* ===== Wishlist & Compare icons on product card ===== */
+}
+
+
+/* ===== Wishlist & Compare icons on product card ===== */
 
 .product-card-image {
   position: relative;
@@ -2388,7 +2015,10 @@
 
 .compare-cart-button:hover {
   background: #c9a24a;
-}/* ===== Categories dropdown ===== */
+}
+
+
+/* ===== Categories dropdown ===== */
 
 .categories-wrapper {
   position: relative;
@@ -2467,7 +2097,10 @@
 .blog-card p {
   color: #555;
   line-height: 1.7;
-}/* ===== Top bar language/currency dropdowns ===== */
+}
+
+
+/* ===== Top bar language/currency dropdowns ===== */
 
 .top-dropdown-wrapper {
   position: relative;
@@ -2512,7 +2145,10 @@
 .top-dropdown-menu button:hover {
   background: #c9a24a;
   color: #fff;
-}/* ===== Top bar Login/Registration clickable ===== */
+}
+
+
+/* ===== Top bar Login/Registration clickable ===== */
 
 .top-right span {
   cursor: pointer;
@@ -2584,7 +2220,10 @@
   text-align: center;
   color: #777;
   font-size: 14px;
-}/* ===== Seller link & messages ===== */
+}
+
+
+/* ===== Seller link & messages ===== */
 
 .seller-link {
   color: #c9a24a;
@@ -2619,7 +2258,10 @@
   color: #fff;
   font-size: 30px;
   line-height: 60px;
-} /* =========================================
+}
+
+
+/* =========================================
     CUSTOMER ACCOUNT MODAL
  ========================================= */
 
@@ -2679,7 +2321,9 @@
 
 .account-content .auth-submit-button {
   width: 100%;
-}.header-profile-avatar {
+}
+
+.header-profile-avatar {
   width: 26px;
   height: 26px;
   margin-right: 6px;
@@ -2705,7 +2349,10 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}/* =========================================
+}
+
+
+/* =========================================
    PROFILE PHOTO - SOCIAL STYLE
 ========================================= */
 
@@ -2847,7 +2494,10 @@
 .profile-remove-item:hover {
   background: #fff5f3;
   color: #8a463b;
-}/* =========================================
+}
+
+
+/* =========================================
    LIVE CAMERA PREVIEW
 ========================================= */
 
@@ -2923,7 +2573,10 @@
   color: #a04d43;
   font-size: 11px;
   text-align: center;
-}/* =========================================
+}
+
+
+/* =========================================
    CUSTOMER MY ORDERS
 ========================================= */
 
@@ -3106,32 +2759,8 @@
   font-size: 12px;
 }
 
-@media (max-width: 600px) {
-  .my-orders-content {
-    padding: 15px;
-  }
 
-  .my-order-header {
-    padding: 13px;
-  }
-
-  .my-order-products {
-    padding: 13px;
-  }
-
-  .my-order-total {
-    padding: 12px 13px;
-  }
-
-  .my-order-header h3 {
-    font-size: 13px;
-  }
-
-  .my-order-status {
-    font-size: 8px;
-    padding: 5px 8px;
-  }
-}/* =========================================
+/* =========================================
    SELLER APPLICATION STATUS
 ========================================= */
 
@@ -3212,7 +2841,10 @@
 
 .seller-status-message.rejected strong {
   color: #9a5f52;
-}/* =========================================
+}
+
+
+/* =========================================
    SELLER DASHBOARD - LUXURY DESIGN
 ========================================= */
 
@@ -3404,30 +3036,8 @@
   color: #8d6b34;
 }
 
-/* Mobile */
 
-@media (max-width: 650px) {
-  .seller-dashboard-content {
-    padding: 18px;
-  }
-
-  .seller-dashboard-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .seller-dashboard-actions {
-    grid-template-columns: 1fr;
-    padding: 16px;
-  }
-
-  .seller-dashboard-panel .cart-header {
-    padding: 16px 18px;
-  }
-
-  .seller-dashboard-panel .cart-header h2 {
-    font-size: 20px;
-  }
-}/* =========================================
+/* =========================================
    SELLER PRODUCT MANAGEMENT
 ========================================= */
 
@@ -3671,25 +3281,8 @@
   border-color: #9a5f52;
 }
 
-@media (max-width: 650px) {
-  .seller-product-form-panel,
-  .seller-products-panel {
-    width: 94vw;
-  }
 
-  .seller-products-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .product-form-image-area {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}/* =========================================
+/* =========================================
    SELLER MY ORDERS
 ========================================= */
 
@@ -3708,11 +3301,8 @@
 
 .seller-orders-content {
   padding: 24px;
-
   max-height: calc(88vh - 82px);
-
   overflow-y: auto;
-
   background: #f8f5f0;
 }
 
@@ -3724,11 +3314,8 @@
 
 .seller-order-card {
   background: #ffffff;
-
   border: 1px solid #e2d7c8;
-
   box-shadow: 0 6px 20px rgba(55, 40, 25, 0.06);
-
   overflow: hidden;
 }
 
@@ -3738,47 +3325,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 15px;
-
   padding: 18px 20px;
-
   background: #fbf9f6;
-
   border-bottom: 1px solid #e9e0d5;
 }
 
 .seller-order-label {
   display: block;
-
   margin-bottom: 4px;
-
   color: #a1804d;
-
   font-size: 8px;
-
   font-weight: 600;
-
   letter-spacing: 1.5px;
 }
 
 .seller-order-header h3 {
   margin: 0 0 5px;
-
   color: #211b17;
-
   font-family: Georgia, "Times New Roman", serif;
-
   font-size: 18px;
-
   font-weight: 400;
 }
 
 .seller-order-header p {
   margin: 0;
-
   color: #8b837b;
-
   font-size: 9px;
 }
 
@@ -3786,47 +3358,34 @@
 
 .seller-order-status {
   padding: 7px 12px;
-
   border-radius: 18px;
-
   font-size: 9px;
-
   font-weight: 600;
-
   text-transform: uppercase;
-
   letter-spacing: 0.7px;
 }
 
 .seller-order-status.pending {
   background: #f5eee4;
-
   color: #8d6b34;
-
   border: 1px solid #d8c6aa;
 }
 
 .seller-order-status.processing {
   background: #eeeaf7;
-
   color: #6f5c8e;
-
   border: 1px solid #cfc3df;
 }
 
 .seller-order-status.shipped {
   background: #eaf2f7;
-
   color: #54758a;
-
   border: 1px solid #bfd2df;
 }
 
 .seller-order-status.completed {
   background: #edf6ee;
-
   color: #4f7d54;
-
   border: 1px solid #b9d4bc;
 }
 
@@ -3834,15 +3393,10 @@
 
 .seller-customer-section {
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 12px;
-
   padding: 18px 20px;
-
   background: #ffffff;
-
   border-bottom: 1px solid #eee6dc;
 }
 
@@ -3852,29 +3406,19 @@
 
 .seller-customer-section span {
   display: block;
-
   margin-bottom: 4px;
-
   color: #9b8974;
-
   font-size: 8px;
-
   text-transform: uppercase;
-
   letter-spacing: 1px;
 }
 
 .seller-customer-section strong {
   display: block;
-
   color: #40372f;
-
   font-size: 11px;
-
   font-weight: 500;
-
   line-height: 1.5;
-
   overflow-wrap: anywhere;
 }
 
@@ -3890,25 +3434,17 @@
 
 .seller-products-title {
   margin-bottom: 10px;
-
   color: #211b17;
-
   font-family: Georgia, "Times New Roman", serif;
-
   font-size: 14px;
-
   font-weight: 500;
 }
 
 .seller-order-product {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
-
   padding: 11px 0;
-
   border-bottom: 1px solid #eee7de;
 }
 
@@ -3919,55 +3455,40 @@
 .seller-order-product img {
   width: 58px;
   height: 68px;
-
   flex-shrink: 0;
-
   object-fit: cover;
-
   background: #f4efe7;
-
   border: 1px solid #d8c8b4;
 }
 
 .seller-order-product-info {
   flex: 1;
-
   min-width: 0;
 }
 
 .seller-order-product-info h4 {
   margin: 0 0 4px;
-
   color: #332b25;
-
   font-family: Georgia, "Times New Roman", serif;
-
   font-size: 12px;
-
   font-weight: 600;
 }
 
 .seller-order-product-info p {
   margin: 0 0 3px;
-
   color: #7f766d;
-
   font-size: 9px;
 }
 
 .seller-order-product-info span {
   color: #9a7843;
-
   font-size: 9px;
 }
 
 .seller-order-product > strong {
   color: #8d6b34;
-
   font-family: Georgia, "Times New Roman", serif;
-
   font-size: 13px;
-
   font-weight: 600;
 }
 
@@ -3975,63 +3496,788 @@
 
 .seller-order-footer {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   padding: 15px 20px;
-
   background: #fbf9f6;
-
   border-top: 1px solid #eee6dc;
 }
 
 .seller-order-footer span {
   color: #81766a;
-
   font-size: 9px;
-
   text-transform: uppercase;
-
   letter-spacing: 1px;
 }
 
 .seller-order-footer strong {
   color: #8d6b34;
-
   font-family: Georgia, "Times New Roman", serif;
-
   font-size: 18px;
-
   font-weight: 600;
 }
 
-/* MOBILE */
 
-@media (max-width: 650px) {
-  .seller-orders-content {
+/* =========================================================
+   MOBILE / TABLET  (Daraz / Amazon style: big + readable)
+   Laptop CSS upar jaisi hai, ye sirf chhoti screen par chalega
+========================================================= */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  /* ---------- ANNOUNCEMENT BAR ---------- */
+  .announcement-bar {
+    height: 38px;
+  }
+
+  .announcement-track {
+    font-size: 12px;
+    gap: 35px;
+  }
+
+  /* ---------- TOP BAR ---------- */
+  .top-bar {
+    height: auto;
+    min-height: 42px;
+    padding: 9px 14px;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    font-size: 13px;
+  }
+
+  .top-left,
+  .top-right {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- MAIN HEADER ---------- */
+  .main-header {
+    min-height: auto;
+    padding: 14px 14px 16px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .logo {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .logo-main {
+    font-size: 32px;
+    letter-spacing: 6px;
+    white-space: nowrap;
+  }
+
+  .logo-sub {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .header-actions {
+    gap: 16px;
+  }
+
+  /* sirf icons dikhao, text hata do (Daraz style) */
+  .header-action > span:not(.action-icon) {
+    display: none;
+  }
+
+  .action-icon {
+    font-size: 27px;
+  }
+
+  .header-action b {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    min-width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+
+  /* ---------- SEARCH (poori width, neechay) ---------- */
+  .search-box {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: none;
+    height: 48px;
+  }
+
+  .search-box input {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .search-box button {
+    width: 56px;
+    font-size: 24px;
+  }
+
+  /* ---------- NAVIGATION ---------- */
+  .navigation {
+    min-height: 52px;
+    padding: 0 0 0 10px;
+    overflow: hidden;
+  }
+
+  .categories-wrapper {
+    flex-shrink: 0;
+  }
+
+  .categories-button {
+    min-width: 135px;
+    height: 52px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .nav-links {
+    min-width: 0;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 0 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    flex-shrink: 0;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .category-menu {
+    min-width: 230px;
+  }
+
+  .category-menu button {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+
+  /* ---------- HERO (upar), TODAY'S DEAL (neechay) ---------- */
+  .hero-section {
+    width: 94%;
+    margin: 16px auto 0;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero-slider {
+    height: 380px;
+  }
+
+  .hero-content {
+    left: 6%;
+    right: 6%;
+    max-width: none;
+  }
+
+  .hero-kicker {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+    line-height: 1.12;
+    max-width: 100%;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .hero-discount {
+    font-size: 24px;
+  }
+
+  .shop-button {
+    padding: 13px 22px;
+    font-size: 13px;
+  }
+
+  .slider-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .prev-arrow {
+    left: 8px;
+  }
+
+  .next-arrow {
+    right: 8px;
+  }
+
+  .slider-dots {
+    bottom: 14px;
+  }
+
+  .todays-deal {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .deal-heading h2 {
+    font-size: 22px;
+  }
+
+  .deal-heading p {
+    font-size: 12px;
+  }
+
+  .deal-product {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .deal-image {
+    height: 145px;
+  }
+
+  .deal-label {
+    font-size: 10px;
+  }
+
+  .deal-info h3 {
+    font-size: 17px;
+  }
+
+  .stars {
+    font-size: 12px;
+  }
+
+  .price strong {
+    font-size: 18px;
+  }
+
+  .price del {
+    font-size: 13px;
+  }
+
+  .deal-info button {
+    font-size: 13px;
+  }
+
+  /* ---------- COLLECTION STRIP (2 x 2) ---------- */
+  .collection-strip {
+    width: 94%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collection-item {
+    min-height: 90px;
+    padding: 14px 12px;
+    gap: 10px;
+    border-right: 1px solid #e4ddd5;
+    border-bottom: 1px solid #e4ddd5;
+  }
+
+  .collection-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .collection-item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .collection-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+  }
+
+  .collection-item strong {
+    font-size: 14px;
+  }
+
+  .collection-item span {
+    font-size: 12px;
+  }
+
+  /* ---------- CATEGORIES (ek ke neechay ek) ---------- */
+  .categories-section {
+    width: 94%;
+    margin: 45px auto;
+  }
+
+  .section-heading > span {
+    font-size: 12px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .section-heading p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .category-image {
+    height: 230px;
+  }
+
+  .category-image span {
+    font-size: 24px;
+  }
+
+  .category-info {
+    padding: 18px;
+  }
+
+  .category-info h3 {
+    font-size: 22px;
+  }
+
+  .category-info p {
+    font-size: 14px;
+  }
+
+  .category-info button,
+  .explore-button {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+
+  .bag-category-slider .category-card {
+    flex: 0 0 78%;
+    min-width: 0;
+  }
+
+  /* ---------- INDIA + UK ---------- */
+  .luxury-collections {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .luxury-collection-card {
+    height: 320px;
+  }
+
+  .luxury-overlay {
+    padding: 22px;
+  }
+
+  .luxury-overlay span {
+    font-size: 11px;
+  }
+
+  .luxury-overlay h3 {
+    font-size: 26px;
+  }
+
+  .luxury-overlay p {
+    font-size: 14px;
+  }
+
+  .luxury-explore-button {
+    font-size: 14px;
+    padding: 11px 22px;
+  }
+
+  /* ---------- PRODUCTS (2 per row, bade aur saaf) ---------- */
+  .fashion-products-section {
+    padding: 40px 12px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-card-image {
+    height: 220px;
+  }
+
+  .product-card-info {
+    padding: 12px;
+  }
+
+  .product-card-info .product-category {
+    font-size: 10px;
+  }
+
+  .product-card-info h3 {
+    font-size: 15px;
+  }
+
+  .product-card-info p {
+    font-size: 12px;
+  }
+
+  .product-card-info .product-price strong {
+    font-size: 19px;
+  }
+
+  .product-card-info .product-price span {
+    font-size: 12px;
+  }
+
+  .product-card-info .shop-product-button,
+  .shop-now-button {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  .card-icon-button {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  /* ---------- PRODUCT DETAIL ---------- */
+  .product-detail-view {
+    padding: 25px 14px 55px;
+  }
+
+  .product-detail-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .product-detail-image {
+    height: 420px;
+  }
+
+  .product-detail-info h1 {
+    font-size: 28px;
+  }
+
+  .product-detail-price {
+    font-size: 26px;
+  }
+
+  .product-detail-info p {
+    font-size: 16px;
+  }
+
+  .detail-action-button {
+    flex: 1;
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  /* ---------- CART ---------- */
+  .cart-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cart-header h2 {
+    font-size: 24px;
+  }
+
+  .cart-item {
+    grid-template-columns: 76px minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .cart-item img {
+    width: 76px;
+    height: 95px;
+  }
+
+  .cart-item-info h3 {
+    font-size: 15px;
+  }
+
+  .cart-item-info p {
+    font-size: 15px;
+  }
+
+  .cart-quantity button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .remove-cart-item {
+    font-size: 13px;
+  }
+
+  .cart-total span {
+    font-size: 15px;
+  }
+
+  .checkout-button {
+    height: 52px;
+    font-size: 14px;
+  }
+
+  /* ---------- CHECKOUT ---------- */
+  .checkout-page-header {
+    padding: 20px 16px;
+  }
+
+  .checkout-logo span {
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+
+  .checkout-logo small {
+    font-size: 8px;
+  }
+
+  .checkout-back {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .checkout-main {
+    grid-template-columns: 1fr;
+    margin: 25px auto;
+    padding: 0 14px;
+    gap: 22px;
+  }
+
+  .checkout-form-section {
+    padding: 22px;
+  }
+
+  .checkout-form-section h1 {
+    font-size: 28px;
+  }
+
+  .checkout-intro {
+    font-size: 14px;
+  }
+
+  .checkout-field label {
+    font-size: 12px;
+  }
+
+  .checkout-field input,
+  .checkout-field textarea {
+    font-size: 16px;
+  }
+
+  .place-order-button {
+    font-size: 14px;
+    padding: 17px;
+  }
+
+  .checkout-order-summary {
+    padding: 22px;
+  }
+
+  .checkout-product h3 {
+    font-size: 15px;
+  }
+
+  .checkout-product p {
+    font-size: 12px;
+  }
+
+  .checkout-product strong {
+    font-size: 14px;
+  }
+
+  /* ---------- POPUPS / LOGIN ---------- */
+  .compare-overlay {
+    padding: 10px;
+  }
+
+  .auth-form input {
+    font-size: 16px;
+  }
+
+  .auth-submit-button {
+    font-size: 14px;
     padding: 15px;
   }
 
-  .seller-order-header {
-    padding: 14px;
+  .auth-switch-text,
+  .auth-info-text {
+    font-size: 14px;
   }
 
+  /* ---------- CUSTOMER MY ORDERS ---------- */
+  .my-orders-panel {
+    width: 94vw;
+    max-width: 94vw;
+  }
+
+  .my-orders-content {
+    padding: 15px;
+  }
+
+  .my-order-header h3 {
+    font-size: 16px;
+  }
+
+  .my-order-header p {
+    font-size: 12px;
+  }
+
+  .my-order-status {
+    font-size: 10px;
+  }
+
+  .my-order-product-info h4 {
+    font-size: 14px;
+  }
+
+  .my-order-product-info p {
+    font-size: 12px;
+  }
+
+  .my-order-product > strong {
+    font-size: 14px;
+  }
+
+  /* ---------- SELLER PANELS ---------- */
+  .seller-dashboard-panel,
+  .seller-product-form-panel,
+  .seller-products-panel,
+  .seller-orders-panel {
+    width: 94vw;
+    max-width: 94vw;
+  }
+
+  .seller-dashboard-content,
+  .seller-products-content,
+  .seller-orders-content,
+  .seller-product-form {
+    padding: 16px;
+  }
+
+  .seller-dashboard-stats,
+  .seller-dashboard-actions,
+  .seller-products-grid,
+  .product-form-row,
   .seller-customer-section {
     grid-template-columns: 1fr;
-    padding: 15px;
   }
 
-  .seller-customer-address {
-    grid-column: auto;
+  .product-form-image-area {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .seller-order-products {
-    padding: 15px;
+  .seller-welcome p,
+  .seller-status-message p {
+    font-size: 14px;
   }
 
-  .seller-order-footer {
-    padding: 13px 15px;
+  .seller-dashboard-actions button,
+  .seller-product-save-button,
+  .seller-status-button {
+    font-size: 13px;
+  }
+
+  .seller-product-form input,
+  .seller-product-form textarea {
+    font-size: 16px;
+  }
+
+  .seller-product-info p,
+  .seller-order-header p,
+  .seller-order-product-info p,
+  .seller-order-product-info span {
+    font-size: 12px;
+  }
+
+  .seller-customer-section strong {
+    font-size: 14px;
+  }
+
+  .seller-product-actions button {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  /* ---------- FOOTER (bada, saaf, parhne mein aasaan) ---------- */
+  .footer {
+    margin-top: 55px;
+  }
+
+  .footer-main {
+    width: 92%;
+    padding: 42px 0 32px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 20px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer .logo-main {
+    font-size: 30px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .footer-column {
+    gap: 12px;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .footer-bottom {
+    padding: 16px 14px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+}
+
+/* ---------- Bohat chhote phones ---------- */
+@media (max-width: 400px) {
+
+  .logo-main {
+    font-size: 27px;
+    letter-spacing: 4px;
+  }
+
+  .hero-slider {
+    height: 400px;
+  }
+
+  .hero-content h1 {
+    font-size: 27px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+}@media (pointer: coarse) {
+  html {
+    font-size: 125%;
   }
 }
